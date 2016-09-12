@@ -2,10 +2,10 @@ app:
  build: .
  volumes:
 #  - .:/app # . not working on windows - full path must be used
-  - .:/usr/src/app
+  - .:/app
  volumes_from:
   - gradledata
- working_dir: /usr/src/app
+ working_dir: /app
  ports:
   - "5000:5000"
  #links:
