@@ -2,12 +2,12 @@ app:
  build: .
  volumes:
 #  - .:/app # . not working on windows - full path must be used
-  - .:/app
+  - .:/usr/src/app
  volumes_from:
   - gradledata
- working_dir: /app
+ working_dir: /usr/src/app
  ports:
-  - "8084:8080"
+  - "8084:8888"
  #links:
  # - db
  environment:
