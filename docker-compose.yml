@@ -1,11 +1,11 @@
 app:
  build: .
- volumes:
+ #volumes:
 #  - .:/app # . not working on windows - full path must be used
-  - .:/app
- volumes_from:
-  - gradledata
- working_dir: /app
+  #- .:/usr/src/app
+ #volumes_from:
+  #- gradledata
+ #working_dir: /usr/src/app
  ports:
   - "5000:5000"
  #links:
@@ -17,8 +17,3 @@ app:
  #environment:
   #MYSQL_ROOT_PASSWORD: password
   #MYSQL_DATABASE: test
-gradledata:
- image: ubuntu
- volumes:
-  - "/root/.gradle/caches/"
- command: echo Data for GRADLE
