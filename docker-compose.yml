@@ -12,8 +12,6 @@ app:
  # - db
  environment:
   FMB_PAGE_ACCESS_TOKEN: EAAdZCCJORd90BADdxjSIQ51cLk3RCJNalhyA0jLyYnL19L3FMuFcLh4JLogRhKsWVadH3G5VpXBbis1hARZBZCrKHchcFNZCgqHVkZBVEQ6SnBosM4MJsoPzIqk3WidZBllb3tH6PtaFo4DtZAWZCEeXg1vgGBECZCYZAZAQeoe8I4CHgZDZD
- command:
-  npm install && npm start
   #db:
  #image: mysql:latest
  #environment:
