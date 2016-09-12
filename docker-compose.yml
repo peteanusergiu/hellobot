@@ -1,0 +1,24 @@
+app:
+ build: .
+ volumes:
+#  - .:/app # . not working on windows - full path must be used
+  - .:/app
+ volumes_from:
+  - gradledata
+ working_dir: /app
+ ports:
+  - "8084:8080"
+ #links:
+ # - db
+ environment:
+  FMB_PAGE_ACCESS_TOKEN: EAAdZCCJORd90BADdxjSIQ51cLk3RCJNalhyA0jLyYnL19L3FMuFcLh4JLogRhKsWVadH3G5VpXBbis1hARZBZCrKHchcFNZCgqHVkZBVEQ6SnBosM4MJsoPzIqk3WidZBllb3tH6PtaFo4DtZAWZCEeXg1vgGBECZCYZAZAQeoe8I4CHgZDZD
+#db:
+ #image: mysql:latest
+ #environment:
+  #MYSQL_ROOT_PASSWORD: password
+  #MYSQL_DATABASE: test
+gradledata:
+ image: ubuntu
+ volumes:
+  - "/root/.gradle/caches/"
+ command: echo Data for GRADLE
