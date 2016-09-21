@@ -7,7 +7,7 @@ const app = express()
 
 const token = process.env.FMB_PAGE_ACCESS_TOKEN
 
-app.set('port', (process.env.PORT || 5000))
+app.set('port', (process.env.PORT || 80))
 
 // Process application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: false}))
