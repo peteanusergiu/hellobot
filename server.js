@@ -17,7 +17,7 @@ app.use(bodyParser.json())
 
 // Index route
 app.get('/', function (req, res) {
-    res.send('I m still alive!')
+    res.send('I am still alive!')
 })
 
 // Index route
