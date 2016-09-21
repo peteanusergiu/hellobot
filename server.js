@@ -16,6 +16,11 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 // Index route
+app.get('/', function (req, res) {
+    res.send('I m still alive!')
+})
+
+// Index route
 app.get('/hellobot', function (req, res) {
     res.send('Hello world, I am a chat bot')
 })
