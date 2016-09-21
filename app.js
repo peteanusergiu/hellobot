@@ -66,7 +66,7 @@ app.get('/', function (req, res) {
  * setup is the same token used here.
  *
  */
-app.get('/webhook', function(req, res) {
+app.get('hellobot/webhook', function(req, res) {
   if (req.query['hub.mode'] === 'subscribe' &&
       req.query['hub.verify_token'] === VALIDATION_TOKEN) {
     console.log("Validating webhook");
@@ -85,7 +85,7 @@ app.get('/webhook', function(req, res) {
  * https://developers.facebook.com/docs/messenger-platform/product-overview/setup#subscribe_app
  *
  */
-app.post('/webhook', function (req, res) {
+app.post('hellobot/webhook', function (req, res) {
   var data = req.body;
 
   // Make sure this is a page subscription
